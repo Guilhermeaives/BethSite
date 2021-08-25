@@ -1,0 +1,200 @@
+<app-header></app-header>
+
+<section class="banner-contact">
+    <h2>Fotos Dos Nossos Produtos</h2>
+</section>
+
+<div class="start">
+
+    <!-- linha 1 -->
+    <section id="cake" class="h3">
+        <H3>Cup Cake</H3>
+    </section>
+    <section class="container">
+        <div class="row">
+
+            <div class="col-md-3" *ngFor="let cake of cakeProduct">
+                <div class="card card1">
+                    <img class="card-img-top img1" [src]="cake.url" alt="Imagem de capa do card">
+                    <div class="card-body">
+                        <p class="card-text">{{ cake.descricao }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--- Linha 2 -->
+    <section id="pirulito" class="h3">
+        <H3>Pirulito de Chocolate</H3>
+    </section>
+    <section class="container">
+        <div class="row">
+            <div class="col-md-3" *ngFor="let pirulito of pirulitoProduct">
+                <div class="card card1">
+                    <img class="card-img-top" [src]="pirulito.url" alt="Imagem de capa do card">
+                    <div class="card-body">
+                        <p class="card-text">{{ pirulito.descricao }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--- Linha 3 -->
+    <section id="boloPalito" class="h3">
+        <H3>Bolo no Palito</H3>
+    </section>
+    <section class="container">
+        <div class="row">
+            <div class="col-md-3" *ngFor="let boloPalito of boloPalitoProduct">
+                <div class="card card1">
+                    <img class="card-img-top" [src]="boloPalito.url" alt="Imagem de capa do card">
+                    <div class="card-body">
+                        <p class="card-text">{{ boloPalito.descricao }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--- Linha 4 -->
+    <section id="trufas" class="h3">
+        <H3>Trufas em 3D</H3>
+    </section>
+    <section class="container">
+        <div class="row">
+            <div class="col-md-3" *ngFor="let trufa of trufaProduct">
+                <div class="card card1">
+                    <img class="card-img-top" [src]="trufa.url" alt="Imagem de capa do card">
+                    <div class="card-body">
+                        <p class="card-text">{{ trufa.descricao }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--- Linha 5-->
+    <section id="cone" class="h3">
+        <H3>Cone (Árvores)</H3>
+    </section>
+    <section class="container">
+        <div class="row">
+            <div class="col-md-3" *ngFor="let cone of coneProduct">
+                <div class="card card1">
+                    <img class="card-img-top" [src]="cone.url" alt="Imagem de capa do card">
+                    <div class="card-body">
+                        <p class="card-text">{{cone.descricao}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--- Linha 6 -->
+    <section id="bombons" class="h3">
+        <H3>Bombons</H3>
+    </section>
+    <section class="container">
+        <div class="row">
+            <div class="col-md-3" *ngFor="let bombons of bombonsProduct">
+                <div class="card card1">
+                    <img class="card-img-top" [src]="bombons.url" alt="Imagem de capa do card">
+                    <div class="card-body">
+                        <p class="card-text">{{bombons.descricao}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--- Linha 7 -->
+
+    <section id="diversos" class="h3">
+        <H3>Diversos</H3>
+    </section>
+    <section class="container">
+        <div class="row">
+            <div class="col-md-3" *ngFor="let diversos of diversosProduct">
+                <div class="card card1">
+                    <img class="card-img-top" [src]="diversos.url" alt="Imagem de capa do card">
+                    <div class="card-body">
+                        <p class="card-text">{{diversos.descricao}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--- Linha 8 -->
+    <section id="pao" class="h3">
+        <H3>
+            Pão de Mel 3D
+        </H3>
+    </section>
+    <section class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card card1" *ngFor="let paoMel of paoMelProduct">
+                    <img class="card-img-top" [src]="paoMel.url" alt="Imagem de capa do card">
+                    <div class="card-body">
+                        <p class="card-text">{{paoMel.descricao}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--- Linha 9 -->
+    <section id="retrato" class="h3">
+        <H3> Porta Retrato </H3>
+    </section>
+    <section class="container">
+        <div class="row">
+            <div class="col-md-3" *ngFor="let retrato of retratoProduct">
+                <div class="card card1">
+                    <img class="card-img-top" [src]="retrato.url" alt="Imagem de capa do card">
+                    <div class="card-body">
+                        <p class="card-text">{{retrato.descricao}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--- Linha 10-->
+    <section id="bolos" class="h3">
+        <H3>Bolos</H3>
+    </section>
+    <section class="container">
+        <div class="row">
+            <div class="col-md-3" *ngFor="let bolo of boloProduct">
+                <div class="card card1">
+                    <img class="card-img-top" [src]="bolo.url" alt="Imagem de capa do card">
+                    <div class="card-body">
+                        <p class="card-text">{{bolo.descricao}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--- Linha 11-->
+    <section id="salgados" class="h3">
+        <H3>Salgados</H3>
+    </section>
+    <section class="container">
+        <div class="row">
+            <div class="col-md-3" *ngFor="let salgados of salgadosProduct">
+                <div class="card card1">
+                    <img class="card-img-top" [src]="salgados.url" alt="Imagem de capa do card">
+                    <div class="card-body">
+                        <p class="card-text">{{salgados.descricao}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

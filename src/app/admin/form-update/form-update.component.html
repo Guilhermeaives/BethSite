@@ -1,0 +1,51 @@
+<div class="container corpo">
+    <h2>{{ titlePage }}</h2>
+    <hr>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <img [src]="product.url" alt="" style="width: 100%; height: 65%; border: 5px;">
+        </div>
+
+        <div class="col-6">
+            <form #form="ngForm" (submit)="update(form)">
+                <div class="row">
+                    <div class="col-6">
+                        <input type="text" placeholder="Titulo" class="form-control" name="title"
+                            [ngModel]="product.title">
+                    </div>
+                    <div class="col-6">
+                        <select name="category" class="form-control" [ngModel]="product.category">
+                            <option value="cup_cake">Cup Cake</option>
+                            <option value="pirulito">Pirulito de Chocolate</option>
+                            <option value="bolo_palito">Bolo no Palito</option>
+                            <option value="trufas">Trufas 3D</option>
+                            <option value="cone">Cone (Árvore)</option>
+                            <option value="bombons">Bombons</option>
+                            <option value="diversos">Diversos</option>
+                            <option value="pao_mel">Pão de Mel 3D</option>
+                            <option value="retrato">Porta Retrato</option>
+                            <option value="bolo">Bolos</option>
+                            <option value="salgados">Salgados</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <input type="text" class="form-control" name="url" placeholder="http://minhaimagem.com.br"
+                            [ngModel]="product.url">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <textarea name="descricao" rows="10" maxlength="100" class="form-control"
+                            [ngModel]="product.descricao"></textarea>
+                    </div>
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-secondary" type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

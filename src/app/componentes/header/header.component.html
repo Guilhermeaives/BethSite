@@ -1,0 +1,48 @@
+<nav class="fixed-top">
+    <div class="subtitulo">
+        <P>Doces Personalizados! Feitos Com Todo Amor e Carinho! Experimente!</P>
+    </div>
+</nav>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #a29bfe; ">
+    <div class="container">
+        <a class="navbar-brand" routerLink="/"> <strong style="font-size: 30px;"> BETH ART CANDY!!!</strong></a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+            aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                        aria-expanded="false" routerLink="/fotos" routerLinkActive="active">Produtos</a>
+                    <ul class="dropdown-menu" style="background-color: #a29bfe;">                       
+                        <li><a class="dropdown-item" href="http://localhost:4200/fotos/#cake" >Cup Cake</a></li>                        
+                        <li><a class="dropdown-item"  href="http://localhost:4200/fotos/#pirulito" routerLinkActive="active">Pitulito de Chocolate</a></li>
+                        <li><a class="dropdown-item" href="http://localhost:4200/fotos/#boloPalito">Bolo no Palito</a></li>
+                        <li><a class="dropdown-item" href="http://localhost:4200/fotos/#trufas">Trufas</a></li>
+                        <li><a class="dropdown-item" href="http://localhost:4200/fotos/#cone">Cone (Árvores)</a></li>
+                        <li><a class="dropdown-item" href="http://localhost:4200/fotos/#bombons">Bombons</a></li>
+                        <li><a class="dropdown-item" href="http://localhost:4200/fotos/#diversos">Diversos</a></li>
+                        <li><a class="dropdown-item" href="http://localhost:4200/fotos/#pao">Pão de Mel</a></li>
+                        <li><a class="dropdown-item" href="http://localhost:4200/fotos/#retrato">porta Retrato</a></li>
+                        <li><a class="dropdown-item" href="http://localhost:4200/fotos/#bolos">Bolos</a></li>  
+                        <li><a class="dropdown-item" href="http://localhost:4200/fotos/#salgados">Salgados</a></li>                     
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/formulario', 0]" routerLinkActive="active">Solicite o
+                        orçamento</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/contatos" routerLinkActive="active">Contato</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

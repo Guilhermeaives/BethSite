@@ -1,0 +1,15 @@
+a {
+    background: #a29bfe ;
+    color: white;
+}
+
+.active{
+    background-color: #00cec9;   
+    border-radius: 20px;
+    color: white;
+}
+
+.subtitulo p {   
+    margin-top: 70px;
+    font-size: calc(0.5em + 0.5vw);
+}

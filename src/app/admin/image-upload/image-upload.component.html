@@ -1,0 +1,12 @@
+
+<input type="file" id="arquivo" (change)="selectFile($event)" class="form-control">
+<div class="d-grid gap-2" style="margin-top: 20px; margin-bottom: 20px;">
+    <button class="btn btn-success" [disabled]="!selectedFiles" (click)="upload()">Upload</button>
+</div>
+
+<div *ngIf="currentFileUpload" class="progress">
+    <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar"
+        attr.aria-valuenow="{{percentage}}" aria-valuemin="0" aria-valuemax="100" [ngStyle]="{width:percentage+'%'}">
+        {{percentage}}%
+    </div>
+</div>

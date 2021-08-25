@@ -1,0 +1,58 @@
+<div class="container corpo">
+    <h2>{{ titlePage }}</h2>
+    <hr>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <app-image-upload></app-image-upload>                
+        </div>
+        <div class="col-sm-6">
+            <div class="img-thumbnail">
+                <img [src]="url" alt="" width="300" height="300" >
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <form [formGroup]="formProduct" (submit)="registerProduct()">
+                <div class="row">
+                    <div class="col-6">
+                        <input type="text" placeholder="Titulo" class="form-control" formControlName="title">
+                    </div>
+                    <div class="col-6">
+                        <select name="category" class="form-control"  formControlName="category" >
+                            <option value="cup_cake">Cup Cake</option>
+                            <option value="pirulito">Pirulito de Chocolate</option>
+                            <option value="bolo_palito">Bolo no Palito</option>
+                            <option value="trufas">Trufas 3D</option>
+                            <option value="cone">Cone (Árvore)</option>
+                            <option value="bombons">Bombons</option>
+                            <option value="diversos">Diversos</option>
+                            <option value="pao_mel">Pão de Mel 3D</option>
+                            <option value="retrato">Porta Retrato</option>
+                            <option value="bolo">Bolos</option>
+                            <option value="salgados">Salgados</option>
+
+                            
+                          </select>
+                       
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <input type="text" [ngModel]="url" class="form-control" name="url" placeholder="http://minhaimagem.com.br"  formControlName="url">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <textarea name="" id="" rows="10" maxlength="100" class="form-control" formControlName="descricao"></textarea>
+                    </div>
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-secondary" type="submit" [disabled]="formProduct.invalid" >Enviar</button>                    
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
