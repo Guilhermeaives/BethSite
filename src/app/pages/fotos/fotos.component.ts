@@ -101,6 +101,10 @@ export class FotosComponent implements OnInit {
             this.salgadosProduct.push(indice11);
             break;
 
+            case 'docinho':           
+            this.salgadosProduct.push(results[i]);
+            break;
+
           default:
             console.log(`Ocorreu um error`);
             break;
