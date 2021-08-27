@@ -24,12 +24,13 @@ import { RegisterComponent } from './login/register/register.component';
 import { FormUpdateComponent } from './form-update/form-update.component';
 import { FormUpdateClienteComponent } from './form-update-cliente/form-update-cliente.component';
 
+
 @NgModule({
   declarations: [
-    PanelcontrolComponent,   
+    PanelcontrolComponent,
     PedidosComponent,
     ProdutosComponent,
-    ClientesComponent,    
+    ClientesComponent,
     HeaderadminComponent,
     FormUploadComponent,
     DetailsUploadComponent,
@@ -39,14 +40,13 @@ import { FormUpdateClienteComponent } from './form-update-cliente/form-update-cl
     RegisterComponent,
     FormUpdateComponent,
     FormUpdateClienteComponent,
-    
-    
   ],
   imports: [
     CommonModule,
     AdminRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+
   ],
   exports: [
     PanelcontrolComponent,

@@ -1,7 +1,5 @@
 
-
-
-.body-contact{  
+.body-contact{
   margin-top: 30px;
   margin-bottom: 30px;
 }
@@ -13,7 +11,7 @@ form {
   margin-right: auto;
   width: 75em;
   color: #00cec9;
- 
+
 }
 button{
   margin-bottom: 10px;
@@ -32,12 +30,15 @@ border-radius: 50%;
   background-color: #00cec9;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 20px;  
+  margin-bottom: 20px;
   margin-top: 40px;
-  width: 80em;
   border-radius: 30px;
-  padding-top: 20px;
   box-shadow: 0 0 1em #a29bfe;
-  
+  padding: 10px;
 }
- 
+
+#sugestion form{
+  width: auto;
+  margin: 20px;
+  margin-bottom: -10px;
+}

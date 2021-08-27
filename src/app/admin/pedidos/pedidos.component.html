@@ -1,49 +1,50 @@
 <div class="admin" style="margin-top: 20px; height: 40em; ">
-    <div class="row">
-        <div class="col-sm-6" style="color: #40407a;">
-            <h2>{{ titlePage }}</h2>
-        </div>
-       <!--  <div class="col-sm-6" style="text-align: right;">
+  <div class="row">
+    <div class="col-sm-6" style="color: #40407a;">
+      <h2>{{ titlePage }}</h2>
+    </div>
+    <!--  <div class="col-sm-6" style="text-align: right;">
             <a class="btn btn-success" [routerLink]="['/formulario', 1]">Cadastrar</a>
         </div> -->
 
-    </div>
-    <hr>
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">Cliente:</th>
-                <th scope="col">Contato:</th>
-                <th scope="col">Pedidos</th>
-                <th scope="col">Açao:</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let pedidos of pedidosAdmin let i = index; ">
-                <!-- <th  *ngFor="let dados of pedidos.pedidos;  " >{{ dados.titulo }}</th>-->
-                <td>{{ pedidos.nome }}</td>
-                <td>{{ pedidos.celular }} / {{ pedidos.email }}</td>
-                <td>
-                    <button class="btn btn-link" (click)="view(pedidos.id)">Visualizar</button>
-                    <ul class="list-group" *ngIf="viwControl && pedidoId == pedidos.id" style="margin-top: 20px;">
-                        <li class="list-group-item" aria-current="true"
-                            style=" background-color: #40407a; color: #fff; ">Produtos</li>
-                        <li class="list-group-item" *ngFor="let dados of pedidos.pedidos;  ">{{ dados.title }}</li>
-                    </ul>
-                    <div class="alert alert-primary" role="alert" *ngIf="viwControl && pedidoId == pedidos.id">
-                        {{ pedidos.menssagem }}
-                    </div>
+  </div>
+  <hr>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Cliente:</th>
+        <th scope="col">Contato:</th>
+        <th scope="col">Pedidos</th>
+        <th scope="col" >Açao:</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pedidos of pedidosAdmin let i = index; ">
+        <!-- <th  *ngFor="let dados of pedidos.pedidos;  " >{{ dados.titulo }}</th>-->
+        <td>{{ pedidos.nome }}</td>
+        <td>{{ pedidos.celular }} / {{ pedidos.email }}</td>
+        <td>
+          <button class="btn btn-link" (click)="view(pedidos.id)">Visualizar</button>
+          <ul class="list-group" *ngIf="viwControl && pedidoId == pedidos.id" style="margin-top: 20px;">
+            <li class="list-group-item" aria-current="true" style=" background-color: #40407a; color: #fff; ">Produtos
+            </li>
+            <li class="list-group-item" *ngFor="let dados of pedidos.pedidos;  ">{{ dados.title }}</li>
+          </ul>
+          <div class="alert alert-primary" role="alert" *ngIf="viwControl && pedidoId == pedidos.id">
+            {{ pedidos.menssagem }}
+          </div>
 
-                </td>
+        </td>
 
-                <td>                    
-                    <button class="btn btn-danger" (click)="excluir(pedidos.id)"
-                        style="margin-left: 20px;">Excluir</button>
-                </td>
+        <td>
+          <button class="btn btn-danger btn-sm" (click)="excluir(pedidos.id)">
+            <i class="fa fa-remove" aria-hidden="true"></i>
+          </button>
+        </td>
 
-            </tr>
-        </tbody>
-    </table>
+      </tr>
+    </tbody>
+  </table>
 
 
 

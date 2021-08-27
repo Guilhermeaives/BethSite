@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 
 import { ReactiveFormsModule } from '@angular/forms';
@@ -23,7 +24,8 @@ import { environment } from 'src/environments/environment';
 
 import { AdminModule } from './admin/admin.module';
 import { FooterComponent } from './componentes/footer/footer.component';
-import { HeaderadminComponent } from './admin/headeradmin/headeradmin.component';
+
+
 
 
 @NgModule({
@@ -31,10 +33,10 @@ import { HeaderadminComponent } from './admin/headeradmin/headeradmin.component'
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    FormComponent,    
+    FormComponent,
     ContatosComponent,
     FotosComponent,
-    FooterComponent,   
+    FooterComponent,
 
   ],
   imports: [
@@ -45,7 +47,8 @@ import { HeaderadminComponent } from './admin/headeradmin/headeradmin.component'
     AngularFirestoreModule,
     AngularFireDatabaseModule,
     AngularFireStorageModule,
-    AdminModule,    
+    AngularFireAuthModule,
+    AdminModule,
 
   ],
   providers: [],

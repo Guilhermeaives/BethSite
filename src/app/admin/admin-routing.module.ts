@@ -10,47 +10,40 @@ import { FormUploadComponent } from './form-upload/form-upload.component';
 
 import { SiginComponent } from './login/sigin/sigin.component';
 import { FormUpdateComponent } from './form-update/form-update.component';
+
 import { FormUpdateClienteComponent } from './form-update-cliente/form-update-cliente.component';
+import { LoginGuard } from '../guards/login.guard';
+import { AuthGuard } from '../guards/auth.guard';
 
 
 const routes: Routes = [
+
+  {path: '', component: SiginComponent, canActivate: [LoginGuard]},
+
   {
-    path: '', component: PanelcontrolComponent,
+    path: 'admin', component: PanelcontrolComponent, canActivate: [AuthGuard],
     children: [
       {
-        path: 'cliente', component: ClientesComponent
+        path: 'cliente', component: ClientesComponent, canActivate: [AuthGuard]
       },
       {
-        path: 'produtoadmin', component: ProdutosComponent
+        path: 'produtoadmin', component: ProdutosComponent, canActivate: [AuthGuard]
       },
       {
-        path: 'pedidos', component: PedidosComponent
+        path: 'pedidos', component: PedidosComponent, canActivate: [AuthGuard]
       },
       {
-        path: 'form', component: FormUploadComponent
+        path: 'form', component: FormUploadComponent, canActivate: [AuthGuard]
       },
       {
-        path: 'sigin', component: SiginComponent
+        path: 'form-update/:id', component: FormUpdateComponent, canActivate: [AuthGuard]
       },
       {
-        path: 'form-update/:id', component: FormUpdateComponent
-      },      
-      {
-        path: 'form-update-cliente/:id', component: FormUpdateClienteComponent
-      }, 
-      {
-        path: '',
-        redirectTo: '/admin/produtoadmin',
-        pathMatch: 'full'
-    }
+        path: 'form-update-cliente/:id', component: FormUpdateClienteComponent, canActivate: [AuthGuard]
+      },
+
     ]
   },
-  {
-    path: '',
-    redirectTo: '/admin/produtoadmin',
-    pathMatch: 'full'
-},
-  
 ];
 
 @NgModule({

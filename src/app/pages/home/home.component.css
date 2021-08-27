@@ -1,38 +1,40 @@
 *{
     border: 0;
+
+
 }
 .section-home{
-    display: flex;    
+    display: flex;
     margin-top: 30px;
     border: 0;
+    width: 100%;
 }
 
 .section-home img {
     display: flex;
     place-items: center;
     margin: auto;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 200%;
 }
 
 .section-home h5{
     text-align: center;
-} 
+}
 
 .section-home p{
     text-align: justify;
 }
 
-
-.section-middle{        
+.section-middle{
     margin-bottom: 20px;
 }
 
-.section-middle img {    
+.section-middle img {
     align-items: flex-end;
-    width: 550px;
+    width: 100%;
     margin: auto;
-    border-radius: 20px; 
-    
+    border-radius: 20px;
+
 }

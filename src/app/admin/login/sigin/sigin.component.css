@@ -9,29 +9,34 @@
     margin-left: auto;
     margin-right: auto;
   }
-  
+
   #secondary{
     position: absolute;
-    margin-top: 40px;
     width: 80%;
-    height: 33em;
+    height: 80%;
     border-radius: 20px;
     box-shadow: 0 0 1px;
-    background-color: #6c5ce7;
+    background-color: #a29bfe;
     display: flex;
-    align-items: center; 
-  
+    align-items: center;
+
   }
-  
+
   #conteudo {
     color: #fff;
     float: left;
     width: 60%;
     border-radius: 20px 0 0 20px;
     display: flex;
-    place-content: center;  
+    place-content: center;
+    text-shadow: 0 0 4px #55efc4;
   }
-  
+
+  #conteudo p {
+    color: #d63031;
+    text-align: center;
+  }
+
   #login {
     float: right;
     background-color: #bfc8c9;
@@ -43,20 +48,20 @@
     border-radius: 0 20px 20px 0;
     margin-left: auto;
     margin-right: auto;
+    box-shadow: 0 0 2px;
   }
-  
+
   #login h2{
     color: #6c5ce7;
     text-align: center;
     text-shadow: 0 0 1em;
     font-weight: bold;
-    font-size: 50px;  
+    font-size: 50px;
   }
-  
+
   #login button{
     margin-top: 10px;
     width: 100%;
   }
-  
-  
-  
+
+

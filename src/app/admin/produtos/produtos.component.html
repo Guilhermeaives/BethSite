@@ -1,4 +1,4 @@
-<div class="container" style="margin-top: 20px; height: 40em; ">
+<div class="container" style="margin-top: 20px">
     <div class="row">
         <div class="col-sm-6" style="color: #40407a;">
             <h2>{{ titlePage }}</h2>
@@ -12,19 +12,26 @@
         <thead >
             <tr>
                 <th scope="col">Título:</th>
-                <th scope="col">Categoria:</th>                
+                <th scope="col">Categoria:</th>
                 <th scope="col">Descrição:</th>
-                <th scope="col">Açao:</th>
+                <th scope="col" colspan="2">Açao:</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let dados of produtosAdmin">
                 <th scope="row">{{ dados.title }}</th>
                 <td>{{ dados.category }}</td>
-                <td>{{ dados.descricao }}</td>            
+                <td>{{ dados.descricao }}</td>
                 <td>
-                    <button class="btn btn-primary" [routerLink]="['/admin/form-update', dados.id]">Editar</button>
-                    <button class="btn btn-danger" (click)="excluir(dados.id)" style="margin-left: 20px;">Excluir</button>
+                    <button class="btn btn-primary btn-sm" [routerLink]="['/admin/form-update', dados.id]">
+                      <i class="fa fa-file" aria-hidden="true"></i>
+                    </button>
+                </td>
+                <td>
+                  <button class="btn btn-danger btn-sm" (click)="excluir(dados.id)" >
+                    <i class="fa fa-remove" aria-hidden="true"></i>
+                  </button>
                 </td>
             </tr>
         </tbody>

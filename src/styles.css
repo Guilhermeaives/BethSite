@@ -3,37 +3,40 @@
     font-family: Snell Roundhand, cursive;
 }
 
-.banner-contact { 
+.banner-contact {
     display: flex;
     place-items: center;
     background-color: #b2bec3;
     height: 250px;
     margin-top: 90px;
     border: 0;
-    
+
   }
-  
+
   .banner-contact h2 {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     color: white;
     font-size: 50px;
-  
+
   }
 
   .subtitulo{
     /*background-color: #34ace0;*/
-    place-items: center;
     background-color: #00cec9;
     width: 100%;
-    height: auto;    
-    color: #6c5ce7;   
-    box-shadow:  0 0 1em; 
-   
-    text-align: center; 
+    height: auto;
+    color: #6c5ce7;
+    box-shadow:  0 0 1em;
+    text-align: center;
     /*font-size: clamp(1em, 1em + 1vw, 1.5em);*/
-  
+
+}
+
+.subtitulo button {
+  display: flex;
+  justify-content: right;
 }
 
   .admin {
