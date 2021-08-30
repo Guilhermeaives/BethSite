@@ -3,3 +3,11 @@
   opacity: 0.5;
   filter: invert(1);
 }
+
+nav{
+  background-color: #a29bfe;
+}
+
+.admin{
+  font-size: 30px;
+}

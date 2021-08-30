@@ -134,10 +134,11 @@
             Pão de Mel 3D
         </H3>
     </section>
+
     <section class="container">
         <div class="row">
-            <div class="col-md-3">
-                <div class="card card1" *ngFor="let paoMel of paoMelProduct">
+            <div class="col-md-3" *ngFor="let paoMel of paoMelProduct">
+                <div class="card card1">
                     <img class="card-img-top" [src]="paoMel.url" alt="Imagem de capa do card">
                     <div class="card-body">
                         <p class="card-text">{{paoMel.descricao}}</p>
@@ -146,7 +147,7 @@
             </div>
         </div>
     </section>
-
+   
     <!--- Linha 9 -->
     <section id="retrato" class="h3">
         <H3> Porta Retrato </H3>
@@ -197,8 +198,27 @@
             </div>
         </div>
     </section>
+
+
+
+    <!--- Linha 12-->
+    <section id="docinhos" class="h3">
+        <H3>Docinhos</H3>
+    </section>
+    <section class="container">
+        <div class="row">
+            <div class="col-md-3" *ngFor="let docinhos of docinhosProduct">
+                <div class="card card1">
+                    <img class="card-img-top" [src]="docinhos.url" alt="Imagem de capa do card">
+                    <div class="card-body">
+                        <p class="card-text">{{docinhos.descricao}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
 
 <footer>
-  <app-footer></app-footer>
+    <app-footer></app-footer>
 </footer>

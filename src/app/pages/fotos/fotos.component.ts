@@ -20,6 +20,7 @@ export class FotosComponent implements OnInit {
   retratoProduct = [];
   boloProduct = [];
   salgadosProduct = [];
+  docinhosProduct = [];
 
   constructor(
     private productService: ProdutosdbService
@@ -39,6 +40,7 @@ export class FotosComponent implements OnInit {
       this.retratoProduct.length = 0;
       this.boloProduct.length = 0;
       this.salgadosProduct.length = 0;
+      this.docinhosProduct.length = 0;
 
 
       for (let i = 0; i < results.length; i++) {
@@ -101,8 +103,8 @@ export class FotosComponent implements OnInit {
             this.salgadosProduct.push(indice11);
             break;
 
-            case 'docinho':           
-            this.salgadosProduct.push(results[i]);
+            case 'docinhos':           
+            this.docinhosProduct.push(results[i]);
             break;
 
           default:

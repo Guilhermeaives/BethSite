@@ -57,7 +57,7 @@ export class FormUploadComponent implements OnInit {
   registerProduct(){
     this.productService.addProduto(this.formProduct.value);
     this.formProduct.reset();
-    this.router.navigateByUrl('/produtoadmin');
+    this.router.navigateByUrl('/admin/produtoadmin');
   }
 
 
